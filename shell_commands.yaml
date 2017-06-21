@@ -1,3 +1,0 @@
-renew_ssl: ~/certbot/certbot-auto renew --quiet --no-self-upgrade --standalone --preferred-challenges http-01
-
-reboot_pi: sudo reboot
