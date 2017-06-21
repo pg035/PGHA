@@ -1,0 +1,24 @@
+- platform: foscam
+  ip: !secret ipcam_salon
+  port: !secret portcam_salon
+  username: !secret usrcam
+  password: !secret pwdcam
+  name: Salon
+
+- platform: foscam
+  ip: !secret ipcam_chambre
+  port: !secret portcam_chambre
+  username: !secret usrcam
+  password: !secret pwdcam
+  name: Chambre
+
+- platform: foscam
+  ip: !secret ipcam_garage
+  port: !secret portcam_garage
+  username: !secret usrcam
+  password: !secret pwdcam
+  name: Garage
+
+- platform: mjpeg
+  mjpeg_url: !secret ipcam_bureau
+  name: Bureau

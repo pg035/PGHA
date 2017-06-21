@@ -1,0 +1,73 @@
+homeassistant:
+  name: Home
+  latitude: !secret lg_home
+  longitude: !secret lt_home
+  elevation: !secret elevation_home
+  unit_system: metric
+  time_zone: Europe/Paris
+
+  customize: !include customize.yaml
+
+frontend:
+
+# Enables configuration UI
+config:
+
+http:
+  api_password: !secret api_pwd
+  ssl_certificate: !secret ssl_cert
+  ssl_key: !secret ssl_key
+  base_url: !secret base_url
+  ip_ban_enabled: True
+  login_attempts_threshold: 5
+
+#logger:
+  #default: critical
+  #logs:
+  #  homeassistant.components.http: warning 
+
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time.
+history:
+
+# View all events in a logbook
+logbook:
+
+# Track the sun
+sun:
+
+# Text to speech
+tts:
+  platform: google
+
+ios:
+
+notify:
+  - name: sms_free
+    platform: free_mobile
+    username: !secret user_free
+    access_token: !secret token_free
+
+mqtt:
+  broker: !secret mqtt_broker
+  port: !secret mqtt_port
+  client_id: home-assistant-1
+  keepalive: 60
+
+zone: !include zones.yaml
+sensor: !include sensors.yaml
+shell_command: !include shell_commands.yaml
+camera: !include cameras.yaml
+switch: !include switches.yaml
+binary_sensor: !include binary_sensors.yaml
+#script: !include scripts.yaml
+group: !include groups.yaml
+automation: !include automations.yaml

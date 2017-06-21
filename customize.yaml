@@ -1,0 +1,19 @@
+# Hide the Battery Level (% left) and State (Plugged-Unplugged)
+sensor.patphone_battery_level:
+  hidden: true
+sensor.patphone_battery_state:
+  hidden: true
+switch.cam_salon_motion:
+  icon: mdi:webcam
+switch.cam_chambre_motion:
+  icon: mdi:webcam
+switch.cam_garage_motion:
+  icon: mdi:webcam
+switch.cam_bureau_motion:
+  icon: mdi:webcam
+sensor.yr_symbol:
+  friendly_name: Weather
+sensor.yr_temperature:
+  friendly_name: Temp
+sensor.yr_wind_speed:
+  friendly_name: Wind
