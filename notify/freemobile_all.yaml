@@ -1,0 +1,4 @@
+- name: sms_free
+  platform: free_mobile
+  username: !secret user_free
+  access_token: !secret token_free

@@ -1,0 +1,11 @@
+- name: Work
+  latitude: !secret lg_work
+  longitude: !secret lt_work
+  radius: 100
+  icon: mdi:factory
+
+- name: !secret inlaws
+  latitude: !secret lg_inlaws
+  longitude: !secret lt_inlaws
+  radius: 50
+  icon: mdi:home-variant

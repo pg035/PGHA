@@ -1,12 +1,4 @@
-homeassistant:
-  name: Home
-  latitude: !secret lg_home
-  longitude: !secret lt_home
-  elevation: !secret elevation_home
-  unit_system: metric
-  time_zone: Europe/Paris
-
-  customize: !include customize.yaml
+homeassistant: !include_dir_merge_named home/
 
 frontend:
 
@@ -50,11 +42,7 @@ tts:
 
 ios:
 
-notify:
-  - name: sms_free
-    platform: free_mobile
-    username: !secret user_free
-    access_token: !secret token_free
+notify: !include_dir_merge_named notify/
 
 mqtt:
   broker: !secret mqtt_broker
@@ -62,12 +50,12 @@ mqtt:
   client_id: home-assistant-1
   keepalive: 60
 
-zone: !include zones.yaml
-sensor: !include sensors.yaml
-shell_command: !include shell_commands.yaml
-camera: !include cameras.yaml
-switch: !include switches.yaml
-binary_sensor: !include binary_sensors.yaml
-#script: !include scripts.yaml
-group: !include groups.yaml
-automation: !include automations.yaml
+zone: !include_dir_merge_named zones/
+sensor: !include_dir_merge_named sensors/
+shell_command: !include_dir_merge_named shell_commands/
+camera: !include_dir_merge_named cameras/
+switch: !include_dir_merge_named switches/
+binary_sensor: !include_dir_merge_named binary_sensors/
+#script: !include_dir_merge_named scripts/
+group: !include_dir_merge_named groups/
+automation: !include_dir_merge_named automations

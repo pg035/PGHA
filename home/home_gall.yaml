@@ -1,0 +1,8 @@
+  name: Home
+  latitude: !secret lg_parent
+  longitude: !secret lt_parent
+  elevation: !secret elevation_parent
+  unit_system: metric
+  time_zone: Europe/Paris
+
+  customize: !include customize_gall.yaml

@@ -1,0 +1,8 @@
+  name: Home
+  latitude: !secret lg_home
+  longitude: !secret lt_home
+  elevation: !secret elevation_home
+  unit_system: metric
+  time_zone: Europe/Paris
+
+  customize: !include customize_pg.yaml

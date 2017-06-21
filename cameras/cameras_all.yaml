@@ -1,0 +1,6 @@
+- platform: foscam
+  ip: !secret ipcam_salon
+  port: !secret portcam_salon
+  username: !secret usrcam
+  password: !secret pwdcam
+  name: Salon

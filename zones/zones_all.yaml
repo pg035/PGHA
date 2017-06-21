@@ -1,0 +1,17 @@
+- name: !secret home1
+  latitude: !secret lg_home
+  longitude: !secret lt_home
+  radius: 25
+  icon: mdi:castle
+
+- name: !secret parent
+  latitude: !secret lg_parent
+  longitude: !secret lt_parent
+  radius: 25
+  icon: mdi:home-variant
+
+- name: !secret sister
+  latitude: !secret lg_sister
+  longitude: !secret lt_sister
+  radius: 25
+  icon: mdi:home-variant
