@@ -1,0 +1,29 @@
+- platform: command_line
+  switches:
+    cam_salon_motion:
+      command_on: !secret cam_salon_command_on
+      command_off: !secret cam_salon_command_off
+      command_state: !secret cam_salon_command_state
+      value_template: '{{ value == "1" }}'
+      friendly_name: Salon
+
+    cam_chambre_motion:
+      command_on: !secret cam_chambre_command_on
+      command_off: !secret cam_chambre_command_off
+      command_state: !secret cam_chambre_command_state
+      value_template: '{{ value == "1" }}'
+      friendly_name: Chambre
+
+    cam_garage_motion:
+      command_on: !secret cam_garage_command_on
+      command_off: !secret cam_garage_command_off
+      command_state: !secret cam_garage_command_state
+      value_template: '{{ value == "1" }}'
+      friendly_name: Garage
+
+    cam_bureau_motion:
+      command_on: !secret cam_bureau_command_on
+      command_off: !secret cam_bureau_command_off
+      command_state: !secret cam_bureau_command_state
+      value_template: '{{ value == "1" }}'
+      friendly_name: Bureau
